@@ -85,10 +85,18 @@ import NewClient from "./components/Clients/NewClient";
 import RenewedClient from "./components/Clients/RenewedClient";
 import Membership from "./components/Clients/Membership";
 import EnquiryForm from "./components/AddDetails/EnquiryForm";
-import AllRight from "./components/Master/AllRight";
+
 import MembershipForm from "./components/AddDetails/MembershipForm";
 import RenewedClients from "./components/Clients/RenewdClients";
 import MemberDetails from "./components/AddDetails/MemberDetails";
+import AllRight from "./components/Master/AllRight/AllRight";
+import CenterSetup from "./components/Master/SetupMaster/CenterSetup";
+import LogoMaster from "./components/Master/SetupMaster/LogoMaster";
+import ProfileMaster from "./components/Master/SetupMaster/ProfileMaster";
+import ServiceMaster from "./components/Master/SetupMaster/ServiceMaster";
+import FormMaster from "./components/Master/SetupMaster/FormMaster";
+import PriceMaster from "./components/Master/SetupMaster/PriceMaster";
+import InvoiceMaster from "./components/Master/SetupMaster/InvoiceMaster";
 const App = () => {
   return (
     <>
@@ -901,6 +909,69 @@ const App = () => {
             element={
               <Sidebar>
                 <AllRight />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/centerSetup/master"
+            element={
+              <Sidebar>
+                <CenterSetup />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/logoMaster/master"
+            element={
+              <Sidebar>
+                <LogoMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/profileMaster/master"
+            element={
+              <Sidebar>
+                <ProfileMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/serviceMaster/master"
+            element={
+              <Sidebar>
+                <ServiceMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/priceMaster/master"
+            element={
+              <Sidebar>
+                <PriceMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/formMaster/master"
+            element={
+              <Sidebar>
+                <FormMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/invoiceMaster/master"
+            element={
+              <Sidebar>
+                <InvoiceMaster />
               </Sidebar>
             }
           />

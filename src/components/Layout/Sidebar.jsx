@@ -814,10 +814,13 @@ const Sidebar = ({ children }) => {
           </Link>
           <div className={option === 9 ? "options" : "hide"}>
             <ul className="category-sb">
+              <li onClick={() => navigate("/centerSetup/master")}>
+                <b>Center Setup</b>
+              </li>
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>General</b>
+                    <b>Setup Master</b>
                   </div>
                   <div>
                     {down === 98 ? (
@@ -838,7 +841,7 @@ const Sidebar = ({ children }) => {
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>Marketing</b>
+                    <b>Marketing Master</b>
                   </div>
                   <div>
                     {down === 97 ? (
@@ -859,7 +862,7 @@ const Sidebar = ({ children }) => {
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>Client Management</b>
+                    <b>Client Master</b>
                   </div>
                   <div>
                     {down === 96 ? (
@@ -880,7 +883,7 @@ const Sidebar = ({ children }) => {
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>Traning</b>
+                    <b>Fitness Master</b>
                   </div>
                   <div>
                     {down === 95 ? (
@@ -901,7 +904,7 @@ const Sidebar = ({ children }) => {
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>Staff Management</b>
+                    <b>HR Master</b>
                   </div>
                   <div>
                     {down === 94 ? (
@@ -922,7 +925,7 @@ const Sidebar = ({ children }) => {
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>Inventory</b>
+                    <b>Inventory Master</b>
                   </div>
                   <div>
                     {down === 93 ? (
@@ -943,7 +946,7 @@ const Sidebar = ({ children }) => {
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>Expense</b>
+                    <b>Finance Master</b>
                   </div>
                   <div>
                     {down === 92 ? (
@@ -964,7 +967,7 @@ const Sidebar = ({ children }) => {
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>Intergartions</b>
+                    <b>Intergartions Master</b>
                   </div>
                   <div>
                     {down === 91 ? (

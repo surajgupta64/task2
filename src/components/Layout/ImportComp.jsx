@@ -781,47 +781,6 @@ const GeneralMaster = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div
-        className="side-box-1"
-        onClick={() => navigate("/staffBiometric/HR")}
-      >
-        <div className="d-flex justify-content-between align-items-center">
-          <div>Getting Started</div>
-        </div>
-      </div>
-      <div
-        className="side-box-1"
-        onClick={() => navigate("/attendanceRegister/HR")}
-      >
-        <div className="d-flex justify-content-between align-items-center">
-          <div>Profile</div>
-        </div>
-      </div>
-      <div className="side-box-1" onClick={() => navigate("/manageStaff/HR")}>
-        <div className="d-flex justify-content-between align-items-center">
-          <div>Manage Services</div>
-        </div>
-      </div>
-      <div className="side-box-1" onClick={() => navigate("/staffBirthday/HR")}>
-        <div className="d-flex justify-content-between align-items-center">
-          <div>Manage Packages</div>
-        </div>
-      </div>
-      <div className="side-box-1" onClick={() => navigate("/followups")}>
-        <div className="d-flex justify-content-between align-items-center">
-          <div>Form Customization</div>
-        </div>
-      </div>
-      <div className="side-box-1" onClick={() => navigate("/followups")}>
-        <div className="d-flex justify-content-between align-items-center">
-          <div>Bill Template</div>
-        </div>
-      </div>
-      <div className="side-box-1" onClick={() => navigate("/followups")}>
-        <div className="d-flex justify-content-between align-items-center">
-          <div>Define Tax</div>
-        </div>
-      </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
         <div className="d-flex justify-content-between align-items-center">
           <div>Checkin Notification</div>
@@ -829,17 +788,17 @@ const GeneralMaster = () => {
       </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>Club Agreement</div>
+          <div>Center T&C Master</div>
         </div>
       </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>Task Setup</div>
+          <div>Remainder Call Master</div>
         </div>
       </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>Trial</div>
+          <div>Trial Setup master</div>
         </div>
       </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
@@ -849,12 +808,12 @@ const GeneralMaster = () => {
       </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>ID Card Print</div>
+          <div>ID Card Master</div>
         </div>
       </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>Help</div>
+          <div>Customer Support Master</div>
         </div>
       </div>
     </>
@@ -869,7 +828,7 @@ const MarketingMaster = () => {
         onClick={() => navigate("/staffBiometric/HR")}
       >
         <div className="d-flex justify-content-between align-items-center">
-          <div>Template Master</div>
+          <div>Sms, E-mail, Template Master</div>
         </div>
       </div>
       <div
@@ -877,27 +836,27 @@ const MarketingMaster = () => {
         onClick={() => navigate("/attendanceRegister/HR")}
       >
         <div className="d-flex justify-content-between align-items-center">
-          <div>Lead Sources</div>
+          <div>Lead Sources Master</div>
         </div>
       </div>
       <div className="side-box-1" onClick={() => navigate("/manageStaff/HR")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>Guest Pass</div>
+          <div>Guest Pass Master</div>
         </div>
       </div>
       <div className="side-box-1" onClick={() => navigate("/staffBirthday/HR")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>Gallery </div>
+          <div>Gallery Master</div>
         </div>
       </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>Automated Communication To staff</div>
+          <div>Automated Communication To staff Master</div>
         </div>
       </div>
       <div className="side-box-1" onClick={() => navigate("/followups")}>
         <div className="d-flex justify-content-between align-items-center">
-          <div>Automated Communication To Member</div>
+          <div>Automated Communication To Member Master</div>
         </div>
       </div>
     </>

@@ -312,7 +312,9 @@ li {
   width: 200px;
   height: 39px;
 }
-
+.border-bottom{
+  border-bottom: 2px solid #fff;
+}
 
 .search-input {
   background-color: #fff;

@@ -25,6 +25,20 @@
   transition: all 0.3s ease;
 }
 
+.text-status {
+
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.night > .text-status {
+  top: 8px;
+  left: -8px;
+  transform: translate(0px, 0);
+}
+
 .night .crater {
   opacity: 0.4;
 }

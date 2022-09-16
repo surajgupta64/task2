@@ -160,7 +160,7 @@ const Dashboard = () => {
             </div>
             <div className="col-lg-4">
               <div className="dbox-4">
-                <div>Converted Client</div>
+                <div>CONVERTED CLIENTS</div>
                 <div>0</div>
                 <div>View More</div>
               </div>

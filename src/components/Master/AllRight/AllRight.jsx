@@ -1,8 +1,10 @@
 import React from "react";
-import PTRenewedVSLeftClient from "../Clients/PTRenewedVSLeftClient";
-import Navbar from "../Layout/Navbar";
-import Tabs from "../Tabs";
-import DashboardMaster from "./AllRight/DashboardMaster";
+import PTRenewedVSLeftClient from "../../Clients/PTRenewedVSLeftClient";
+import Navbar from "../../Layout/Navbar";
+import Tabs from "../../Tabs";
+import ClientMaster from "./ClientMaster";
+import DashboardMaster from "./DashboardMaster";
+import LeadMaster from "./LeadMaster";
 
 const AllRight = () => {
   const data = [
@@ -10,9 +12,9 @@ const AllRight = () => {
       title: "Dashboard",
       compo: <DashboardMaster />,
     },
-    { title: "Lead", compo: <PTRenewedVSLeftClient /> },
+    { title: "Lead", compo: <LeadMaster /> },
 
-    { title: "Clients", compo: <PTRenewedVSLeftClient /> },
+    { title: "Clients", compo: <ClientMaster /> },
     { title: "Marketing & Communication", compo: <PTRenewedVSLeftClient /> },
     { title: "Inventory", compo: <PTRenewedVSLeftClient /> },
     { title: "Finance", compo: <PTRenewedVSLeftClient /> },
@@ -28,7 +30,7 @@ const AllRight = () => {
       <div className="page_reducer_1">
         <div className="dbox-10">
           <div className="text-center" style={{ fontSize: "23px" }}>
-            Renewals VS Left Client
+            All Rights
           </div>
           <div className="mt-3">
             <Tabs data={data} />

@@ -2,19 +2,22 @@ import React, { useState } from "react";
 import "react-calendar/dist/Calendar.css";
 import ToggleButton from "../../ToggleButton";
 
-const DashboardMaster = () => {
-  const [search, setSearch] = useState(true);
-  const [unisearch, setUnisearch] = useState(true);
-  const [summary, setSummary] = useState(true);
-  const [collected, setCollected] = useState(true);
-  const [paymentMode, setPaymentMode] = useState(true);
-  const [expense, setExpense] = useState(true);
-  const [myFollowup, setMyFollowup] = useState(true);
-  const [allFollowup, setAllFollowup] = useState(true);
-  const [saleTarget, setSaleTaregt] = useState(true);
-  const [ptTarget, setPTTarget] = useState(true);
-  const [corporateTarget, setCorporateTarget] = useState(true);
-  const [ttcTarget, setTTCTarget] = useState(true);
+const LeadMaster = () => {
+  const [enquiry, setEnquiry] = useState(true);
+  const [addMember, setAddMember] = useState(true);
+  const [deleteEnq, setDeleteEnq] = useState(true);
+  const [printAll, setPrintAll] = useState(true);
+  const [dailySales, setDailySales] = useState(true);
+  const [revenue, setRevenue] = useState(true);
+  const [expRevenue, setExpRevenue] = useState(true);
+  const [revTar, setRevTar] = useState(true);
+  const [monthTill, setMonthTill] = useState(true);
+  const [service, setService] = useState(true);
+  const [fee, setFee] = useState(true);
+  const [upgrade, setUpgrade] = useState(true);
+  const [notInterest, setNotInterest] = useState(true);
+  const [ptSalesReport, setPtSalesReport] = useState(true);
+  const [corporateSales, setCorporateSales] = useState(true);
 
   return (
     <>
@@ -29,191 +32,209 @@ const DashboardMaster = () => {
                 fontWeight: "bold",
               }}
             >
-              Dashboard
+              Lead
             </div>
             <div className="row">
               <div className="col-lg-8">
                 <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">Search:</div>
-                </div>
-              </div>
-              <div className="col-lg-4 mt-2">
-                <div className="btn-group ">
-                  <ToggleButton
-                    toggled={search}
-                    onClick={() => setSearch(!search)}
-                  />
-                </div>
-              </div>
-              <div className="col-lg-8">
-                <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">Universal Search:</div>
-                </div>
-              </div>
-              <div className="col-lg-4 mt-2">
-                <div className="btn-group ">
-                  <ToggleButton
-                    toggled={unisearch}
-                    onClick={() => setUnisearch(!unisearch)}
-                  />
-                </div>
-              </div>
-              <div className="col-lg-8">
-                <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">Summary:</div>
-                </div>
-              </div>
-              <div className="col-lg-4 mt-2">
-                <div className="btn-group ">
-                  <ToggleButton
-                    toggled={summary}
-                    onClick={() => setSummary(!summary)}
-                  />
-                </div>
-              </div>
-
-              <div className="col-lg-8">
-                <div className="d-flex left" style={{ gap: "30px" }}>
                   <div className="mr-3">
-                    Sales, Pending Payment and Payment Collected Display:
+                    Add enquiry, manage enquiries, enquiry archive:
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 mt-2">
                 <div className="btn-group ">
                   <ToggleButton
-                    toggled={collected}
-                    onClick={() => setCollected(!collected)}
+                    toggled={enquiry}
+                    onClick={() => setEnquiry(!enquiry)}
                   />
                 </div>
               </div>
               <div className="col-lg-8">
                 <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">Payment mode summary:</div>
+                  <div className="mr-3">Convert Enquiry & Add member:</div>
                 </div>
               </div>
               <div className="col-lg-4 mt-2">
                 <div className="btn-group ">
                   <ToggleButton
-                    toggled={paymentMode}
-                    onClick={() => setPaymentMode(!paymentMode)}
+                    toggled={addMember}
+                    onClick={() => setAddMember(!addMember)}
                   />
                 </div>
               </div>
               <div className="col-lg-8">
                 <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">Expense summary:</div>
+                  <div className="mr-3">Delete enquiries:</div>
                 </div>
               </div>
               <div className="col-lg-4 mt-2">
                 <div className="btn-group ">
                   <ToggleButton
-                    toggled={expense}
-                    onClick={() => setExpense(!expense)}
+                    toggled={deleteEnq}
+                    onClick={() => setDeleteEnq(!deleteEnq)}
+                  />
+                </div>
+              </div>
+
+              <div className="col-lg-8">
+                <div className="d-flex left" style={{ gap: "30px" }}>
+                  <div className="mr-3">Print all enquiries :</div>
+                </div>
+              </div>
+              <div className="col-lg-4 mt-2">
+                <div className="btn-group ">
+                  <ToggleButton
+                    toggled={printAll}
+                    onClick={() => setPrintAll(!printAll)}
+                  />
+                </div>
+              </div>
+              <div className="col-lg-8">
+                <div className="d-flex left" style={{ gap: "30px" }}>
+                  <div className="mr-3">Daily sales (DSR):</div>
+                </div>
+              </div>
+              <div className="col-lg-4 mt-2">
+                <div className="btn-group ">
+                  <ToggleButton
+                    toggled={dailySales}
+                    onClick={() => setDailySales(!dailySales)}
+                  />
+                </div>
+              </div>
+              <div className="col-lg-8">
+                <div className="d-flex left" style={{ gap: "30px" }}>
+                  <div className="mr-3">Revenue:</div>
+                </div>
+              </div>
+              <div className="col-lg-4 mt-2">
+                <div className="btn-group ">
+                  <ToggleButton
+                    toggled={revenue}
+                    onClick={() => setRevenue(!revenue)}
+                  />
+                </div>
+              </div>
+              <div className="col-lg-8">
+                <div className="d-flex left" style={{ gap: "30px" }}>
+                  <div className="mr-3">Expected Revenue:</div>
+                </div>
+              </div>
+              <div className="col-lg-4 mt-2">
+                <div className="btn-group ">
+                  <ToggleButton
+                    toggled={expRevenue}
+                    onClick={() => setExpRevenue(!expRevenue)}
+                  />
+                </div>
+              </div>
+              <div className="col-lg-8">
+                <div className="d-flex left" style={{ gap: "30px" }}>
+                  <div className="mr-3">Revenue vs target:</div>
+                </div>
+              </div>
+              <div className="col-lg-4 mt-2">
+                <div className="btn-group ">
+                  <ToggleButton
+                    toggled={revTar}
+                    onClick={() => setRevTar(!revTar)}
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-6">
-            <br />
-            <div
-              className="title"
-              style={{
-                fontSize: "18px",
-                fontWeight: "bold",
-              }}
-            >
-              Follow-ups
+          <div className="col-lg-6 mt-5">
+            <div className="row">
+              <div className="col-lg-8">
+                <div className="d-flex left" style={{ gap: "30px" }}>
+                  <div className="mr-3">Revenue month till date:</div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="btn-group mt-2">
+                  <ToggleButton
+                    toggled={monthTill}
+                    onClick={() => setMonthTill(!monthTill)}
+                  />
+                </div>
+              </div>
+              <div className="col-lg-8">
+                <div className="d-flex left" style={{ gap: "30px" }}>
+                  <div className="mr-3">Service sale, service type:</div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="btn-group mt-2">
+                  <ToggleButton
+                    toggled={service}
+                    onClick={() => setService(!service)}
+                  />
+                </div>
+              </div>
             </div>
             <div className="row">
               <div className="col-lg-8">
                 <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">View only my follow-ups:</div>
+                  <div className="mr-3">Registration fee:</div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="btn-group mt-2">
+                  <ToggleButton toggled={fee} onClick={() => setFee(!fee)} />
+                </div>
+              </div>
+              <div className="col-lg-8">
+                <div className="d-flex left" style={{ gap: "30px" }}>
+                  <div className="mr-3">
+                    Upgrade and cross-sell (3 reports):
+                  </div>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="btn-group mt-2">
                   <ToggleButton
-                    toggled={myFollowup}
-                    onClick={() => setMyFollowup(!myFollowup)}
+                    toggled={upgrade}
+                    onClick={() => setUpgrade(!upgrade)}
                   />
                 </div>
               </div>
               <div className="col-lg-8">
                 <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">View all follow-ups:</div>
+                  <div className="mr-3">Not interested:</div>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="btn-group mt-2">
                   <ToggleButton
-                    toggled={allFollowup}
-                    onClick={() => setAllFollowup(!allFollowup)}
-                  />
-                </div>
-              </div>
-            </div>
-            <br />
-            <div
-              className="title"
-              style={{
-                fontSize: "18px",
-                fontWeight: "bold",
-              }}
-            >
-              Emplyoee Dahsbord
-            </div>
-            <div className="row">
-              <div className="col-lg-8">
-                <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">Sales Target:</div>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="btn-group mt-2">
-                  <ToggleButton
-                    toggled={saleTarget}
-                    onClick={() => setSaleTaregt(!saleTarget)}
+                    toggled={notInterest}
+                    onClick={() => setNotInterest(!notInterest)}
                   />
                 </div>
               </div>
               <div className="col-lg-8">
                 <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">PT Target:</div>
+                  <div className="mr-3">PT Sales Report:</div>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="btn-group mt-2">
                   <ToggleButton
-                    toggled={ptTarget}
-                    onClick={() => setPTTarget(!ptTarget)}
+                    toggled={ptSalesReport}
+                    onClick={() => setPtSalesReport(!ptSalesReport)}
                   />
                 </div>
               </div>
               <div className="col-lg-8">
                 <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">Corporate Target:</div>
+                  <div className="mr-3">Corporate sales:</div>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="btn-group mt-2">
                   <ToggleButton
-                    toggled={corporateTarget}
-                    onClick={() => setCorporateTarget(!corporateTarget)}
-                  />
-                </div>
-              </div>
-              <div className="col-lg-8">
-                <div className="d-flex left" style={{ gap: "30px" }}>
-                  <div className="mr-3">TTC Target:</div>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="btn-group mt-2">
-                  <ToggleButton
-                    toggled={ttcTarget}
-                    onClick={() => setTTCTarget(!ttcTarget)}
+                    toggled={corporateSales}
+                    onClick={() => setCorporateSales(!corporateSales)}
                   />
                 </div>
               </div>
@@ -225,4 +246,4 @@ const DashboardMaster = () => {
   );
 };
 
-export default DashboardMaster;
+export default LeadMaster;
