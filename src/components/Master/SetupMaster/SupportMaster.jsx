@@ -1,17 +1,12 @@
 import React from "react";
-import { AiOutlineForm } from "react-icons/ai";
-import { BsCalendar3, BsFillImageFill } from "react-icons/bs";
-import { FaFileInvoiceDollar } from "react-icons/fa";
-import { HiCurrencyRupee } from "react-icons/hi";
-import { IoDocumentText } from "react-icons/io5";
+import { FaAddressCard } from "react-icons/fa";
+import { IoCallOutline, IoDocumentText } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import {
-  MdOutlineMiscellaneousServices,
-  MdPowerSettingsNew,
-} from "react-icons/md";
+import { MdPowerSettingsNew, MdSupportAgent } from "react-icons/md";
 import Navbar from "../../Layout/Navbar";
+import { SiGoogleclassroom } from "react-icons/si";
 
-const CenterSetup = () => {
+const SupportMaster = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -25,7 +20,7 @@ const CenterSetup = () => {
             marginLeft: "64px",
           }}
         >
-          Center Setup Master
+          Support Master
         </div>
         <div
           className="title"
@@ -34,7 +29,7 @@ const CenterSetup = () => {
             marginLeft: "64px",
           }}
         >
-          Complete the following steps for center setup
+          Complete the following steps for center support master
         </div>
 
         <div
@@ -43,14 +38,14 @@ const CenterSetup = () => {
         >
           <div className="row">
             <div className="col-lg-2">
-              <BsFillImageFill
+              <FaAddressCard
                 style={{ marginLeft: "20px", height: "45px", width: "45px" }}
               />
             </div>
             <div className="col-lg-7">
               <div className="d-flex left" style={{ marginTop: "0px" }}>
                 <div className="row">
-                  Company Logo Setup
+                  ID Card Master
                   <br />
                   Brand logo
                 </div>
@@ -59,7 +54,7 @@ const CenterSetup = () => {
             <div className="col-lg-2 mt-2">
               <button
                 className="btn btn-own"
-                onClick={() => navigate("/logoMaster/master")}
+                onClick={() => navigate("/idCardMaster/master")}
               >
                 <MdPowerSettingsNew
                   style={{ height: "20px", width: "20px", marginRight: "4px" }}
@@ -82,7 +77,7 @@ const CenterSetup = () => {
             <div className="col-lg-7">
               <div className="d-flex left" style={{ marginTop: "0px" }}>
                 <div className="row">
-                  Company Profile Setup
+                  Center T & C Master
                   <br />
                   Set Up Branch Profile
                 </div>
@@ -91,7 +86,7 @@ const CenterSetup = () => {
             <div className="col-lg-2 mt-2">
               <button
                 className="btn btn-own"
-                onClick={() => navigate("/profileMaster/master")}
+                onClick={() => navigate("/centerTcMaster/master")}
               >
                 <MdPowerSettingsNew
                   style={{ height: "20px", width: "20px", marginRight: "4px" }}
@@ -107,14 +102,14 @@ const CenterSetup = () => {
         >
           <div className="row">
             <div className="col-lg-2">
-              <MdOutlineMiscellaneousServices
+              <IoCallOutline
                 style={{ marginLeft: "20px", height: "50px", width: "50px" }}
               />
             </div>
             <div className="col-lg-7">
               <div className="d-flex left" style={{ marginTop: "0px" }}>
                 <div className="row">
-                  Services Master
+                  Remainder Call Master
                   <br />
                   Set Up Branch Profile
                 </div>
@@ -123,7 +118,7 @@ const CenterSetup = () => {
             <div className="col-lg-2 mt-2">
               <button
                 className="btn btn-own"
-                onClick={() => navigate("/serviceMaster/master")}
+                onClick={() => navigate("/remainderCalls/master")}
               >
                 <MdPowerSettingsNew
                   style={{ height: "20px", width: "20px", marginRight: "4px" }}
@@ -136,18 +131,18 @@ const CenterSetup = () => {
 
         <div
           className="dbox-14"
-          style={{ padding: "15px", backgroundColor: "#33C68C" }}
+          style={{ padding: "15px", backgroundColor: "red" }}
         >
           <div className="row">
             <div className="col-lg-2">
-              <HiCurrencyRupee
+              <SiGoogleclassroom
                 style={{ marginLeft: "20px", height: "50px", width: "50px" }}
               />
             </div>
             <div className="col-lg-7">
               <div className="d-flex left" style={{ marginTop: "0px" }}>
                 <div className="row">
-                  Price Master
+                  Batch Master
                   <br />
                   Set Up Branch Profile
                 </div>
@@ -156,7 +151,7 @@ const CenterSetup = () => {
             <div className="col-lg-2 mt-2">
               <button
                 className="btn btn-own"
-                onClick={() => navigate("/priceMaster/master")}
+                onClick={() => navigate("/remainderCalls/master")}
               >
                 <MdPowerSettingsNew
                   style={{ height: "20px", width: "20px", marginRight: "4px" }}
@@ -169,18 +164,18 @@ const CenterSetup = () => {
 
         <div
           className="dbox-14"
-          style={{ padding: "15px", backgroundColor: "#EC9F2F" }}
+          style={{ padding: "15px", backgroundColor: "green" }}
         >
           <div className="row">
             <div className="col-lg-2">
-              <BsCalendar3
+              <MdSupportAgent
                 style={{ marginLeft: "20px", height: "50px", width: "50px" }}
               />
             </div>
             <div className="col-lg-7">
               <div className="d-flex left" style={{ marginTop: "0px" }}>
                 <div className="row">
-                  Batch time Master
+                  Customer Support Master
                   <br />
                   Set Up Branch Profile
                 </div>
@@ -196,75 +191,9 @@ const CenterSetup = () => {
             </div>
           </div>
         </div>
-
-        <div
-          className="dbox-14"
-          style={{ padding: "15px", backgroundColor: "#6B33C6" }}
-        >
-          <div className="row">
-            <div className="col-lg-2">
-              <AiOutlineForm
-                style={{ marginLeft: "20px", height: "50px", width: "50px" }}
-              />
-            </div>
-            <div className="col-lg-7">
-              <div className="d-flex left" style={{ marginTop: "0px" }}>
-                <div className="row">
-                  Form Master
-                  <br />
-                  Set Up Branch Profile
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 mt-2">
-              <button
-                className="btn btn-own"
-                onClick={() => navigate("/formMaster/master")}
-              >
-                <MdPowerSettingsNew
-                  style={{ height: "20px", width: "20px", marginRight: "4px" }}
-                />
-                Start
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="dbox-14"
-          style={{ padding: "15px", backgroundColor: "#2F8C18" }}
-        >
-          <div className="row">
-            <div className="col-lg-2">
-              <FaFileInvoiceDollar
-                style={{ marginLeft: "20px", height: "50px", width: "50px" }}
-              />
-            </div>
-            <div className="col-lg-7">
-              <div className="d-flex left" style={{ marginTop: "0px" }}>
-                <div className="row">
-                  Invoice Master
-                  <br />
-                  Set Up Branch Profile
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 mt-2">
-              <button
-                className="btn btn-own"
-                onClick={() => navigate("/invoiceMaster/master")}
-              >
-                <MdPowerSettingsNew
-                  style={{ height: "20px", width: "20px", marginRight: "4px" }}
-                />
-                Start
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
 };
 
-export default CenterSetup;
+export default SupportMaster;

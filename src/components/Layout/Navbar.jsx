@@ -15,6 +15,7 @@ import { RiSpeedLine } from "react-icons/ri";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { DropDown2 } from "./ImportComp";
+import { IoMdNotifications } from "react-icons/io";
 
 const Navbar = () => {
   const [search, setSearch] = useState(false);
@@ -72,6 +73,7 @@ const Navbar = () => {
             <li className="nav-icons">
               <TbBrandBooking />
             </li>
+
             <li className="nav-icons">
               <BsCalendarEvent />
             </li>
@@ -80,6 +82,9 @@ const Navbar = () => {
             </li>
             <li className="nav-icons">
               <BsFilePostFill />
+            </li>
+            <li className="nav-icons">
+              <IoMdNotifications />
             </li>
             <li className="nav-icons">
               <ImTelegram />

@@ -3,7 +3,7 @@ import ToggleButton from "./ToggleButton";
 
 const Section = ({ title, data }) => {
   return (
-    <div className="dbox-14" style={{ width: "600px" }}>
+    <div style={{ width: "600px" }}>
       <div
         className="title"
         style={{
@@ -19,7 +19,10 @@ const Section = ({ title, data }) => {
           <div className="row" key={index}>
             <div className="col-lg-8">
               <div className="d-flex left" style={{ gap: "30px" }}>
-                <div className="mr-3">{item}:</div>
+                <div className="mr-3">
+                  {index + 1}&nbsp;&nbsp;&nbsp;&nbsp;
+                  {item}:
+                </div>
               </div>
             </div>
             <div className="col-lg-4 mt-2">

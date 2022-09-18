@@ -817,10 +817,13 @@ const Sidebar = ({ children }) => {
               <li onClick={() => navigate("/centerSetup/master")}>
                 <b>Center Setup</b>
               </li>
+              <li onClick={() => navigate("/supportMaster/master")}>
+                <b>Support Master</b>
+              </li>
               <li>
                 <div className="d-flex justify-content-between">
                   <div>
-                    <b>Setup Master</b>
+                    <b>Support Master</b>
                   </div>
                   <div>
                     {down === 98 ? (

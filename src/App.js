@@ -97,6 +97,11 @@ import ServiceMaster from "./components/Master/SetupMaster/ServiceMaster";
 import FormMaster from "./components/Master/SetupMaster/FormMaster";
 import PriceMaster from "./components/Master/SetupMaster/PriceMaster";
 import InvoiceMaster from "./components/Master/SetupMaster/InvoiceMaster";
+import CenterTcMaster from "./components/Master/SetupMaster/CenterTCMaster";
+import SupportMaster from "./components/Master/SetupMaster/SupportMaster";
+import TCMember from "./components/Master/SetupMaster/TCMember";
+import EditAgreement from "./components/Master/SetupMaster/EditAgreement";
+import RemainderCallsMaster from "./components/Master/SetupMaster/RemainderCallsMaster";
 const App = () => {
   return (
     <>
@@ -972,6 +977,52 @@ const App = () => {
             element={
               <Sidebar>
                 <InvoiceMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/centerTcMaster/master"
+            element={
+              <Sidebar>
+                <CenterTcMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/supportMaster/master"
+            element={
+              <Sidebar>
+                <SupportMaster />
+              </Sidebar>
+            }
+          />
+
+          <Route
+            exact
+            path="/tc/master"
+            element={
+              <Sidebar>
+                <TCMember />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/editAgreement/master"
+            element={
+              <Sidebar>
+                <EditAgreement />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/remainderCalls/master"
+            element={
+              <Sidebar>
+                <RemainderCallsMaster />
               </Sidebar>
             }
           />

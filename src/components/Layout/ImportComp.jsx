@@ -786,7 +786,10 @@ const GeneralMaster = () => {
           <div>Checkin Notification</div>
         </div>
       </div>
-      <div className="side-box-1" onClick={() => navigate("/followups")}>
+      <div
+        className="side-box-1"
+        onClick={() => navigate("/centerTcMaster/master")}
+      >
         <div className="d-flex justify-content-between align-items-center">
           <div>Center T&C Master</div>
         </div>
