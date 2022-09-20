@@ -5,20 +5,20 @@ import { AiFillEdit, AiOutlineDelete } from "react-icons/ai";
 import Navbar from "../../Layout/Navbar";
 import Table from "../../Table";
 
-const EmployeeDesignation = () => {
+const LeaveTypeMaster = () => {
   const [action, setAction] = useState(false);
   const Users = [
     {
       id: 1,
-      staff_name: "Business Partner",
-      attendance_id: "Business Partner",
+      staff_name: "Sick Leave",
+      attendance_id: "5",
       fingerprint: "0",
       active: "ON",
     },
     {
       id: 2,
-      staff_name: "Center Manager",
-      attendance_id: "-",
+      staff_name: "Paid Leave",
+      attendance_id: "8",
       fingerprint: "0",
       active: "ON",
     },
@@ -26,11 +26,11 @@ const EmployeeDesignation = () => {
 
   const column = [
     { heading: "S.No", value: "id" },
-    { heading: "Job Designation Name", value: "staff_name" },
-    { heading: "Job Designation Details", value: "attendance_id" },
-    { heading: "Staff count", value: "fingerprint" },
+
+    { heading: "Leave Type", value: "staff_name" },
+    { heading: "Leave Days", value: "attendance_id" },
     {
-      heading: "Delete",
+      heading: "Action",
       btn1: (
         <div className="d-flex justify-content-around">
           <div className="bg-icon d-flex justify-content-center align-items-center">
@@ -51,15 +51,13 @@ const EmployeeDesignation = () => {
         <div className="dbox-10">
           <div>
             <div className="text-center" style={{ fontSize: "23px" }}>
-              Employee Designation
+              Leave List
             </div>
             <div className="d-flex justify-content-between mt-2">
               <div></div>
               <div>
                 {action === false && (
-                  <button onClick={() => setAction(!action)}>
-                    Add Job Designation
-                  </button>
+                  <button onClick={() => setAction(!action)}>Add Leave</button>
                 )}
               </div>
             </div>
@@ -67,46 +65,46 @@ const EmployeeDesignation = () => {
               <div className="d-flex justify-content-between mt-2">
                 <div>
                   <div className="row">
-                    <div className="col-lg-2">
+                    <div className="col-lg-3">
                       <div className="d-flex left" style={{ gap: "30px" }}>
-                        <div className="mr-3">Job Designation Name:</div>
+                        <div className="mr-3">Leave Type Name:</div>
                       </div>
                     </div>
 
-                    <div className="col-lg-10">
+                    <div className="col-lg-9">
                       <div className="d-flex mt-3" style={{ gap: "30px" }}>
                         <div className="btn-group">
                           <input
                             type="text"
                             className="btn btn-own"
-                            placeholder="Enter Subject"
+                            placeholder="Enter Leave Type"
                           />
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-2">
+                    <div className="col-lg-3">
                       <div className="d-flex left" style={{ gap: "30px" }}>
-                        <div className="mr-3">Job Designation Details:</div>
+                        <div className="mr-3">Leave Days:</div>
                       </div>
                     </div>
-                    <div className="col-lg-10">
+                    <div className="col-lg-9">
                       <div className="d-flex  mt-3" style={{ gap: "30px" }}>
                         <div className="btn-group">
-                          <textarea
-                            className="filter-btn2"
-                            style={{
-                              minHeight: "100px",
-                              borderRadius: "10px",
-                              padding: "10px",
-                              minWidth: "700px",
-                            }}
-                            placeholder="Type Email"
-                          ></textarea>
+                          <input
+                            type="number"
+                            className="btn btn-own"
+                            placeholder="Enter Leave Days"
+                          />
                         </div>
                       </div>
                       <div className="mt-2">
-                        <button className="mr-3">Save</button>
-                        <button onClick={() => setAction(false)}>Cancel</button>
+                        <button className="mr-3 filter-btn2">Save</button>
+                        <button
+                          className="filter-btn2"
+                          onClick={() => setAction(false)}
+                        >
+                          Cancel
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -122,4 +120,4 @@ const EmployeeDesignation = () => {
   );
 };
 
-export default EmployeeDesignation;
+export default LeaveTypeMaster;

@@ -106,6 +106,11 @@ import StaffForm from "./components/AddDetails/StaffForm";
 import ProductForm from "./components/AddDetails/ProductForm";
 import MarketingMaster from "./components/Master/MarketingMaster/MarketingMaster";
 import TemplateMaster from "./components/Master/MarketingMaster/TemplateMaster";
+import EmployeeDesignation from "./components/Master/HRMaster/EmployeeDesignation";
+import HolidayMaster from "./components/Master/HRMaster/HolidaysMaster";
+import LeaveTypeMaster from "./components/Master/HRMaster/LeaveTypeMaster";
+import PayrollMaster from "./components/Master/HRMaster/PayrollMaster";
+import EmployeeDetails from "./components/AddDetails/EmployeeDetails";
 const App = () => {
   return (
     <>
@@ -181,6 +186,15 @@ const App = () => {
             element={
               <Sidebar>
                 <MemberDetails />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="employeeDetails/form"
+            element={
+              <Sidebar>
+                <EmployeeDetails />
               </Sidebar>
             }
           />
@@ -1065,6 +1079,42 @@ const App = () => {
             element={
               <Sidebar>
                 <RemainderCallsMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/jobDesignation/HR"
+            element={
+              <Sidebar>
+                <EmployeeDesignation />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/holidaysMaster/HR"
+            element={
+              <Sidebar>
+                <HolidayMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/leaveTypeMaster/HR"
+            element={
+              <Sidebar>
+                <LeaveTypeMaster />
+              </Sidebar>
+            }
+          />
+          <Route
+            exact
+            path="/payrollMaster/HR"
+            element={
+              <Sidebar>
+                <PayrollMaster />
               </Sidebar>
             }
           />

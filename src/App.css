@@ -442,6 +442,24 @@ li {
   z-index: 1;
   margin-bottom: 0px !important;
 }
+.options3 {
+  position: absolute;
+  line-height: 25px;
+  letter-spacing: 2px;
+  /* padding-left: 40px; */
+  /* padding-top: 9px;
+  padding-bottom: 9px; */
+  width: 220px;
+  font-size: 14px;
+  height: auto;
+  background-color: rgb(227, 227, 227);
+  color: "#000";
+  left: 70px;
+  bottom: 0px;
+  border-radius: 5px;
+  z-index: 1;
+  margin-bottom: 0px !important;
+}
 .navMobileMenu {
   visibility: hidden;
 }

@@ -37,7 +37,7 @@ const FollowUpCalls = () => {
     { heading: "S.No", value: "Srno" },
     { heading: "Enquiry ID", value: "EnquiryId" },
     { heading: "Date", value: "Date" },
-    { heading: "Time", value: "Time" },
+    { heading: "Call Time", value: "Time" },
     { heading: "Member Name", value: "MemberName" },
     { heading: "Contact", value: "Contact" },
     { heading: "Service", value: "Service" },
@@ -82,7 +82,7 @@ const FollowUpCalls = () => {
       Contact: "9136123476",
       Service: "Yoga",
       Source: "Facebook",
-      CallStatus: "Cold",
+      CallStatus: "",
       Comments: "Not Interested",
       Followups: "30-08-2022 4.50 PM",
       Staff: "Sejal Ganatra",
@@ -150,7 +150,7 @@ const FollowUpCalls = () => {
               </label>
             </div>
           </div>
-          <div className="Custom Date Range" style={{ gap: "30px" }}>
+          <div className="d-flex align-items-center" style={{ gap: "30px" }}>
             <div style={{ fontSize: "15px" }}>From</div>
             <div className="cal-icon">
               <BsCalendarCheck onClick={() => setCal(true)} />

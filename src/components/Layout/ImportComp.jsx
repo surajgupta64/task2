@@ -201,6 +201,14 @@ const DropDown2 = () => {
           <div>Member Details</div>
         </div>
       </div>
+      <div
+        className="side-box-1"
+        onClick={() => navigate("/employeeDetails/form")}
+      >
+        <div className="d-flex justify-content-between align-items-center">
+          <div>Employee Details</div>
+        </div>
+      </div>
     </>
   );
 };
@@ -932,7 +940,7 @@ const StaffManagementMaster = () => {
     <>
       <div
         className="side-box-1"
-        onClick={() => navigate("/staffBiometric/HR")}
+        onClick={() => navigate("/jobDesignation/HR")}
       >
         <div className="d-flex justify-content-between align-items-center">
           <div>Staff Designation</div>
@@ -940,13 +948,29 @@ const StaffManagementMaster = () => {
       </div>
       <div
         className="side-box-1"
-        onClick={() => navigate("/attendanceRegister/HR")}
+        onClick={() => navigate("/holidaysMaster/HR")}
+      >
+        <div className="d-flex justify-content-between align-items-center">
+          <div>Holidays Master</div>
+        </div>
+      </div>
+      <div
+        className="side-box-1"
+        onClick={() => navigate("/leaveTypeMaster/HR")}
+      >
+        <div className="d-flex justify-content-between align-items-center">
+          <div>Leave Type Master</div>
+        </div>
+      </div>
+      <div
+        className="side-box-1"
+        onClick={() => navigate("/jobDesignation/HR")}
       >
         <div className="d-flex justify-content-between align-items-center">
           <div>Attendance Setup</div>
         </div>
       </div>
-      <div className="side-box-1" onClick={() => navigate("/manageStaff/HR")}>
+      <div className="side-box-1" onClick={() => navigate("/payrollMaster/HR")}>
         <div className="d-flex justify-content-between align-items-center">
           <div>Staff Payroll Setup</div>
         </div>

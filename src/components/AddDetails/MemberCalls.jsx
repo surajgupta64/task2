@@ -37,12 +37,12 @@ const MemberCalls = () => {
     { heading: "S.No", value: "Srno" },
     { heading: "Enquiry ID", value: "EnquiryId" },
     { heading: "Date", value: "Date" },
-    { heading: "Time", value: "Time" },
+    { heading: "Call Time", value: "Time" },
     { heading: "Member Name", value: "MemberName" },
     { heading: "Contact", value: "Contact" },
     { heading: "Service", value: "Service" },
-    { heading: "Source", value: "Source" },
-    { heading: "Call Status", value: "CallStatus" },
+    { heading: "Call Status", value: "Source" },
+    { heading: "Call Type", value: "CallStatus" },
     { heading: "Next Followups Date", value: "Followups" },
     { heading: "Comments", value: "Comments" },
 
@@ -81,8 +81,8 @@ const MemberCalls = () => {
       MemberName: "Nayana Nagrecha",
       Contact: "9136123476",
       Service: "Yoga",
-      Source: "Facebook",
-      CallStatus: "Cold",
+      Source: "Missed",
+      CallStatus: "Welcome Call",
       Comments: "Not Interested",
       Followups: "30-08-2022 4.50 PM",
       Staff: "Sejal Ganatra",
@@ -96,8 +96,8 @@ const MemberCalls = () => {
       MemberName: "Nayana Nagrecha",
       Contact: "9136123476",
       Service: "Yoga",
-      Source: "Facebook",
-      CallStatus: "Hot",
+      Source: "Ring",
+      CallStatus: "Renewals Call",
       Followups: "30-08-2022 4.50 PM",
       Staff: "Sejal Ganatra",
     },
@@ -105,9 +105,41 @@ const MemberCalls = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-around mt-4">
+      <div className="d-flex justify-content-between mt-4 ml-5 ">
         <div className="d-flex" style={{ gap: "10px" }}>
+          <div className="d-flex align-items-center" style={{ gap: "30px" }}>
+            <div style={{ fontSize: "15px" }}>From</div>
+            <div className="cal-icon">
+              <BsCalendarCheck onClick={() => setCal(true)} />
+              {openCal && (
+                <div>
+                  <Calendar onChange={onChange} value={value} />
+                </div>
+              )}
+            </div>
+            <div style={{ fontSize: "15px" }}>To</div>
+            <div className="cal-icon">
+              <BsCalendarCheck onClick={() => setCal(false)} />
+              {openCal && (
+                <div>
+                  <Calendar onChange={onChange} value={value} />
+                </div>
+              )}
+            </div>
+          </div>
+
           <div class="btn-group">
+            <input
+              type="text"
+              className="btn filter-btn2"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div>
+            <button className="btn filter-primary-btn">Go</button>
+          </div>
+          <div class="btn-group">
+            <div className="mr-3">Call Type:</div>
             <button
               type="button"
               className="btn filter-selector dropdown-toggle"
@@ -150,68 +182,115 @@ const MemberCalls = () => {
               </label>
             </div>
           </div>
-          <div className="Custom Date Range" style={{ gap: "30px" }}>
-            <div style={{ fontSize: "15px" }}>From</div>
-            <div className="cal-icon">
-              <BsCalendarCheck onClick={() => setCal(true)} />
-              {openCal && (
-                <div>
-                  <Calendar onChange={onChange} value={value} />
-                </div>
-              )}
-            </div>
-            <div style={{ fontSize: "15px" }}>To</div>
-            <div className="cal-icon">
-              <BsCalendarCheck onClick={() => setCal(false)} />
-              {openCal && (
-                <div>
-                  <Calendar onChange={onChange} value={value} />
-                </div>
-              )}
-            </div>
-          </div>
-
           <div class="btn-group">
-            <input
-              type="text"
-              className="btn filter-btn2"
-              placeholder="Enter Name"
-            />
-          </div>
-          <div>
-            <button className="btn filter-primary-btn">Go</button>
+            <div className="mr-3">Call Status:</div>
+            <button
+              type="button"
+              className="btn filter-selector dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              {action1}
+            </button>
+            <div className="dropdown-menu">
+              <label
+                className="dropdown-item"
+                onClick={() => setAction1("Name")}
+              >
+                Select
+              </label>
+              <label
+                className="dropdown-item"
+                onClick={() => setAction1("Mobile")}
+              >
+                Mobile
+              </label>
+              <label
+                className="dropdown-item"
+                onClick={() => setAction1("Service Name")}
+              >
+                Service Name
+              </label>
+              <label
+                className="dropdown-item"
+                onClick={() => setAction1("Sales Rep")}
+              >
+                Sales Rep
+              </label>
+              <label
+                className="dropdown-item"
+                onClick={() => setAction1("Trainer")}
+              >
+                Trainer
+              </label>
+            </div>
           </div>
         </div>
-        <div className="d-flex" style={{ gap: "10px" }}>
-          <div
-            className=" btn filter-btn2"
-            style={{ backgroundColor: "yellow" }}
-          >
-            Total : 23
-          </div>
+        <div className="d-flex" style={{ gap: "10px" }}></div>
+      </div>
+      <div className="d-flex justify-content-between mt-4 ml-4 mr-4">
+        <div className=" btn filter-btn2" style={{ backgroundColor: "yellow" }}>
+          Welcome : 23
+        </div>
 
-          <div
-            className=" btn filter-btn2"
-            style={{ backgroundColor: "skyblue" }}
-          >
-            Cold : 18
-          </div>
+        <div
+          className=" btn filter-btn2"
+          style={{ backgroundColor: "skyblue" }}
+        >
+          Upgrade Call : 18
+        </div>
 
-          <div
-            className=" btn filter-btn2"
-            style={{ backgroundColor: "#F39C12" }}
-          >
-            Warm : 18
-          </div>
-          <div
-            className=" btn filter-btn2"
-            style={{ backgroundColor: "#2ECC71" }}
-          >
-            Hot : 18
-          </div>
-          <div className="btn filter-btn2" style={{ backgroundColor: "red" }}>
-            Missed Calls : 5
-          </div>
+        <div
+          className=" btn filter-btn2"
+          style={{ backgroundColor: "#F39C12" }}
+        >
+          Courtesy Call : 18
+        </div>
+        <div
+          className=" btn filter-btn2"
+          style={{ backgroundColor: "#2ECC71" }}
+        >
+          Renewal Call : 18
+        </div>
+
+        <div
+          className=" btn filter-btn2"
+          style={{ backgroundColor: "#2ECC71" }}
+        >
+          Payment Call : 18
+        </div>
+
+        <div className="btn filter-btn2" style={{ backgroundColor: "red" }}>
+          Birthday Call : 5
+        </div>
+        <div
+          className=" btn filter-btn2"
+          style={{ backgroundColor: "#2ECC71" }}
+        >
+          Total Call : 18
+        </div>
+
+        <div
+          className=" btn filter-btn2"
+          style={{ backgroundColor: "skyblue" }}
+        >
+          Cold : 18
+        </div>
+
+        <div className=" btn filter-btn2" style={{ backgroundColor: "orange" }}>
+          Warm : 18
+        </div>
+
+        <div
+          className=" btn filter-btn2"
+          style={{ backgroundColor: "#2ECC71" }}
+        >
+          Hot : 18
+        </div>
+
+        <div className=" btn filter-btn2" style={{ backgroundColor: "red" }}>
+          Missed Call : 18
         </div>
       </div>
       <div>
